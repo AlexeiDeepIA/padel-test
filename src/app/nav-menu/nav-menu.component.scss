@@ -1,0 +1,9 @@
+ .scroll-down {
+      transform: translateY(20vh);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .scroll-up {
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
+    }
