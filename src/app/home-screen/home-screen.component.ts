@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-home-screen',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-screen.component.scss']
 })
 export class HomeScreenComponent {
-
+  
 }

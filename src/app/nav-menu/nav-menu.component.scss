@@ -1,9 +1,21 @@
  .scroll-down {
-      transform: translateY(20vh);
-      transition: transform 0.3s ease-in-out;
-    }
+  transform: translateY(20vh);
+  transition: transform 0.3s ease-in-out;
+}
 
-    .scroll-up {
-      transform: translateY(0);
-      transition: transform 0.3s ease-in-out;
-    }
+.scroll-up {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.animate-color-change {
+  width: 100px;
+  background-color: #BBF246;
+  display: flex;  
+  border-radius: 9999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+
