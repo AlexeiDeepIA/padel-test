@@ -9,6 +9,8 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { MyGamesComponent } from './my-games/my-games.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     SignupComponent,
     HomeScreenComponent,
     MyGamesComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
