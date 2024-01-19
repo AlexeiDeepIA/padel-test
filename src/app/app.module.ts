@@ -10,6 +10,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { MyGamesComponent } from './my-games/my-games.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DetailVideoComponent } from './detail-video/detail-video.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProfileComponent } from './profile/profile.component';
     HomeScreenComponent,
     MyGamesComponent,
     NavMenuComponent,
-    ProfileComponent
+    ProfileComponent,
+    DetailVideoComponent
   ],
   imports: [
     BrowserModule,

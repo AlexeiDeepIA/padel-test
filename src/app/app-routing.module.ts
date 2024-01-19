@@ -7,6 +7,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { MyGamesComponent } from './my-games/my-games.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DetailVideoComponent } from './detail-video/detail-video.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'my-games', component: MyGamesComponent},
   { path: 'menu', component: NavMenuComponent},  
   { path: 'profile', component: ProfileComponent},
+  { path: 'details', component: DetailVideoComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
