@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,8 @@ import { MyGamesComponent } from './my-games/my-games.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailVideoComponent } from './detail-video/detail-video.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthGoogleService } from './_services/auth-google.service';
 
 
 @NgModule({
@@ -27,7 +31,9 @@ import { DetailVideoComponent } from './detail-video/detail-video.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    OAuthModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
