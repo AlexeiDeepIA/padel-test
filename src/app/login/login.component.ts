@@ -10,9 +10,8 @@ export class LoginComponent {
 
   constructor(private authGoogleService: AuthGoogleService){}
 
-
   login(){
-    this.authGoogleService.login();
+    this.authGoogleService.login();    
   }
 
 }

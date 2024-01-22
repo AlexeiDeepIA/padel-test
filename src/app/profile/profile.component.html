@@ -2,12 +2,11 @@
 <div class="w-full h-full">
     <div class="flex items-start p-6">        
         <div class="rounded-full bg-[#BBF246] p-[2px]">
-            <img src="https://franchisematch.com/wp-content/uploads/2015/02/john-doe.jpg" class="w-[30vw] rounded-full" alt="">   
+            <img src="{{ profileData?.picture }}" class="w-[30vw] rounded-full" alt="">   
         </div>
         <div class="pt-6 grid">
-            <span class="text-black font-bold pl-6 text-lg"> John Doe </span>  
-            <span class="text-gray-400 pl-6"> johndoe@gmail.com </span>   
-            <span class="text-bold pl-6 text-blue-600 font-bold"> Edit Profile </span>
+            <span class="text-black font-bold pl-6 text-lg"> {{ profileData?.name }} </span>  
+            <span class="text-gray-400 pl-6"> {{ profileData?.email }} </span>               
         </div> 
     </div>
     <div class="grid p-6">
@@ -90,9 +89,9 @@
                 </svg>                  
             </button>
         </div>
-        <div class="p-6">
-            <button class="bg-red-600 w-full p-4 rounded-lg">
-                <span class="text-white font-bold"> Exit </span>
+        <div class="p-4">
+            <button class="bg-red-600 w-full p-2 rounded-lg" (click)="logout()">
+                <span class="text-white font-bold"> Logout </span>
             </button>
         </div>        
     </div>

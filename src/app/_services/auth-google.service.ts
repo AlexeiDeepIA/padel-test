@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import { AuthConfig, OAuthService } from 'angular-oauth2-oidc';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGoogleService {
 
-  constructor(private oauthService: OAuthService ) { 
+  constructor(
+    private oauthService: OAuthService,
+    private router: Router ) { 
     this.initLogin();
   }
 
-    initLogin() {
+    async initLogin() {
       const config: AuthConfig = {
         issuer: 'https://accounts.google.com',
         strictDiscoveryDocumentValidation: false,
@@ -21,7 +24,7 @@ export class AuthGoogleService {
 
       this.oauthService.configure(config);
       this.oauthService.setupAutomaticSilentRefresh();
-      this.oauthService.loadDiscoveryDocumentAndTryLogin();
+      await this.oauthService.loadDiscoveryDocumentAndTryLogin();      
     }
 
     login() {
@@ -30,6 +33,8 @@ export class AuthGoogleService {
 
     logout(){
       this.oauthService.logOut();
+      this.router.navigate(['/home']);
+      
     }
 
     getProfile(){

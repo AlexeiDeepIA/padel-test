@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DetailVideoComponent } from './detail-video/detail-video.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGoogleService } from './_services/auth-google.service';
+import { RepetitionComponent } from './repetition/repetition.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AuthGoogleService } from './_services/auth-google.service';
     MyGamesComponent,
     NavMenuComponent,
     ProfileComponent,
-    DetailVideoComponent
+    DetailVideoComponent,
+    RepetitionComponent
   ],
   imports: [
     BrowserModule,

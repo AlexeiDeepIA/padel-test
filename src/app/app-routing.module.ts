@@ -8,6 +8,7 @@ import { MyGamesComponent } from './my-games/my-games.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailVideoComponent } from './detail-video/detail-video.component';
+import { RepetitionComponent } from './repetition/repetition.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'menu', component: NavMenuComponent},  
   { path: 'profile', component: ProfileComponent},
   { path: 'details', component: DetailVideoComponent},
+  { path: 'video', component: RepetitionComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

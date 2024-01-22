@@ -9,11 +9,19 @@ import { AuthGoogleService } from '../_services/auth-google.service';
 })
 export class HomeScreenComponent {
 
+   profileData: any;
+
   constructor (private AuthGoogleService: AuthGoogleService) {}
 
   ngOnInit(){
-    const metaData = JSON.stringify(this.AuthGoogleService.getProfile());
-    console.log(metaData);    
+    this.AuthGoogleService.initLogin().then(() =>{
+      this.getProfileData();
+    })
+  } 
+
+  getProfileData(){
+    const metaData = this.AuthGoogleService.getProfile();
+    this.profileData = metaData;
   }
-  
+    
 }
