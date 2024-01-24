@@ -21,7 +21,7 @@ export class HomeScreenComponent {
 
   getProfileData(){
     const metaData = this.AuthGoogleService.getProfile();
-    this.profileData = metaData;
+    this.profileData = metaData;        
   }
     
 }
