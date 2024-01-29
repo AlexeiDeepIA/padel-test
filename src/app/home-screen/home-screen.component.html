@@ -1,8 +1,8 @@
 <app-nav-menu></app-nav-menu>
 <div class="w-full h-full">    
     <div class="p-6 flex justify-between ">
-        <div class="bg-[#BBF246] p-[2px] rounded-full">
-            <img [routerLink]="['/profile']" src="{{ profileData.picture }}" class="w-12 rounded-full" alt="">
+        <div class="bg-[#57FDDA] p-[2px] rounded-full">
+            <img [routerLink]="['/profile']" src="{{ profileData.picture }}" class="w-12 rounded-full" alt="" (error)="setDefaultImage()">
         </div>
         <span class="text-black font-bold text-2xl">Welcome, {{ profileData.given_name }}!</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 font-extrabold">
@@ -11,7 +11,7 @@
     </div>
     <div class="grid justify-center w-full h-full">        
         <div class="relative">
-            <input type="text" placeholder="Search" class="shadow-md border-2 border-gray-200 w-[370px] p-2 rounded-lg bg-gray-300/30 focus:border-[#BBF246] focus:outline-none focus:shadow-outline-blue" >
+            <input type="text" placeholder="Search" class="shadow-md border-2 border-gray-200 w-[370px] p-2 rounded-lg bg-gray-300/30 focus:border-[#57FDDA] focus:outline-none focus:shadow-outline-blue" >
             <span class="absolute inset-y-0 right-0 flex items-center pr-2">
                 <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="absolute bottom-0 right-0 p-2 text-white">
                     <div class="flex justify-end">
-                        <button class="bg-[#BBF246] rounded-full m-2 p-4">
+                        <button class="bg-[#57FDDA] rounded-full m-2 p-4">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
                                 <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
                             </svg>                          
@@ -55,7 +55,7 @@
                 </div>
                 <div class="absolute bottom-0 right-0 p-2 text-white">
                     <div class="flex justify-end">
-                        <button class="bg-[#BBF246] rounded-full m-2 p-4">
+                        <button class="bg-[#57FDDA] rounded-full m-2 p-4">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
                                 <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
                             </svg>                          
@@ -74,7 +74,7 @@
                 </div>
                 <div class="absolute bottom-0 right-0 p-2 text-white">
                     <div class="flex justify-end">
-                        <button class="bg-[#BBF246] rounded-full m-2 p-4">
+                        <button class="bg-[#57FDDA] rounded-full m-2 p-4">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
                                 <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
                             </svg>                          
@@ -124,7 +124,7 @@
     <!-- Section -->
     <span class="text-lg font-bold p-6"> Categories </span>
     <div class="overflow-x-scroll flex  flex-row pt-4 gap-2">
-        <div class="bg-[#BBF246] ml-2 min-w-[15vw] rounded-full px-2 flex justify-center font-bold py-[3px]"> All </div>
+        <div class="bg-[#57FDDA] ml-2 min-w-[15vw] rounded-full px-2 flex justify-center font-bold py-[3px]"> All </div>
         <div class="bg-white min-w-[20vw] rounded-full flex justify-center font-bold py-[3px] border-2 border-gray-200"> Cardio </div>
         <div class="bg-white min-w-[20vw] rounded-full flex justify-center font-bold py-[3px] border-2 border-gray-200"> Muscle </div>
         <div class="bg-white min-w-[20vw] rounded-full flex justify-center font-bold py-[3px] border-2 border-gray-200"> Weigth </div>
@@ -142,7 +142,7 @@
                     <span class="text-white font-bold">Wake Up Call</span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <p class="text-lg text-[#BBF246]">04 | Workouts for Beginner</p>                                                           
+                    <p class="text-lg text-[#57FDDA]">04 | Workouts for Beginner</p>                                                           
                 </div>                
             </div>            
         </div>   
@@ -155,7 +155,7 @@
                     <span class="text-white font-bold"> Full Body Goal Crusher </span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <p class="text-lg text-[#BBF246]">07 | Workouts for Beginner</p>                                                           
+                    <p class="text-lg text-[#57FDDA]">07 | Workouts for Beginner</p>                                                           
                 </div>                
             </div>            
         </div> 
@@ -168,7 +168,7 @@
                     <span class="text-white font-bold"> Lower Body Strength </span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <p class="text-lg text-[#BBF246]">05 | Workouts for Beginner</p>                                                           
+                    <p class="text-lg text-[#57FDDA]">05 | Workouts for Beginner</p>                                                           
                 </div>                
             </div>            
         </div>
@@ -181,7 +181,7 @@
                     <span class="text-white font-bold"> Learn the Basic of Training </span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <p class="text-lg text-[#BBF246]">06 | Workouts for Beginner</p>                                                           
+                    <p class="text-lg text-[#57FDDA]">06 | Workouts for Beginner</p>                                                           
                 </div>                
             </div>            
         </div>            

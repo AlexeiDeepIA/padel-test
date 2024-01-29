@@ -9,6 +9,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailVideoComponent } from './detail-video/detail-video.component';
 import { RepetitionComponent } from './repetition/repetition.component';
+import { DarkmodeComponent } from './darkmode/darkmode.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'details', component: DetailVideoComponent},
   { path: 'video', component: RepetitionComponent},
+  { path: 'darkmode', component: DarkmodeComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -16,6 +16,7 @@ import { DetailVideoComponent } from './detail-video/detail-video.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGoogleService } from './_services/auth-google.service';
 import { RepetitionComponent } from './repetition/repetition.component';
+import { DarkmodeComponent } from './darkmode/darkmode.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RepetitionComponent } from './repetition/repetition.component';
     NavMenuComponent,
     ProfileComponent,
     DetailVideoComponent,
-    RepetitionComponent
+    RepetitionComponent,
+    DarkmodeComponent
   ],
   imports: [
     BrowserModule,

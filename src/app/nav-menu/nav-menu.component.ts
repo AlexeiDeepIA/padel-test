@@ -41,8 +41,8 @@ export class NavMenuComponent {
   updateMenuColor() {
     // Lógica para asignar colores según la página actual
     if (this.currentPage.includes('/homescreen')) {
-      this.animateColorChange = this.currentMenuColor !== '#BBF246';
-      this.currentMenuColor = '#BBF246';
+      this.animateColorChange = this.currentMenuColor !== '#57FDDA';
+      this.currentMenuColor = '#57FDDA';
     } else {
       this.animateColorChange = this.currentMenuColor !== '#192026';
       this.currentMenuColor = '#192026';
