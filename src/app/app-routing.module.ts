@@ -13,7 +13,7 @@ import { DarkmodeComponent } from './darkmode/darkmode.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
-  { path: 'home', component: HomeComponent},
+  { path: 'welcome', component: HomeComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'homescreen', component: HomeScreenComponent},
   { path: 'my-games', component: MyGamesComponent},
@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'details', component: DetailVideoComponent},
   { path: 'video', component: RepetitionComponent},
   { path: 'darkmode', component: DarkmodeComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' }
 ];
 
 @NgModule({

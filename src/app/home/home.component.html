@@ -1,19 +1,17 @@
 <div class="w-full h-screen">
     <div class="text-black text-center grid justify-center pt-28 h-[80vh]">        
-        <div class="flex flex-col h-[80vh] justify-between">            
-            <img src="/assets/images/logo.png" alt="" class="w-60 pt-6">
+        <div class="flex flex-col h-[80vh] justify-between mx-auto">            
+            <img src="/assets/images/LogoBlack.png" alt="" class="dark:hidden w-64 pt-6">
+            <img src="/assets/images/LogoWhite.png" alt="" class="hidden dark:block w-64 pt-6">
             <div class="grid justify-center pb-12 w-60 self-end h-auto">
-                <button [routerLink]="['/login']" class="bg-[#000000] w-60 p-2 mt-6 rounded-lg font-bold sombrita text-white">
+                <button [routerLink]="['/login']" class="bg-[#000000] w-60 p-2 mt-6 rounded-lg font-bold sombrita text-white dark:bg-white dark:text-black">
                     Login 
                 </button>
-                <button [routerLink]="['/signup']" class="border-2 border-neutral-800 p-2 mt-6 rounded-lg font-bold">
+                <button [routerLink]="['/signup']" class="border-2 border-neutral-800 p-2 mt-6 rounded-lg font-bold dark:border-gray-200 dark:text-gray-200">
                     Sign Up
                 </button>
             </div>            
         </div>        
-    </div>
-     <div class="grid justify-center absolute inset-x-0 bottom-0 h-16">
-        <span class="font-bold text-black underline">Continue as a guest</span>
-    </div>
+    </div>     
 </div>
   

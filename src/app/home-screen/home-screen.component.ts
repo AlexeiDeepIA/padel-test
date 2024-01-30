@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { AuthGoogleService } from '../_services/auth-google.service';
 
 
@@ -8,11 +8,12 @@ import { AuthGoogleService } from '../_services/auth-google.service';
   styleUrls: ['./home-screen.component.scss']
 })
 export class HomeScreenComponent {
-
+  
+   isDarkMode: boolean = false;
    profileData: any;
    picture: any;
 
-  constructor (private AuthGoogleService: AuthGoogleService) {}
+  constructor (private AuthGoogleService: AuthGoogleService, private el: ElementRef) {}
 
   ngOnInit(){
     this.AuthGoogleService.initLogin().then(() =>{
@@ -29,5 +30,12 @@ export class HomeScreenComponent {
     this.profileData = metaData;    
     this.picture = this.profileData.picture;          
   }
+
+  toggleDarkMode() {
+    this.el.nativeElement.ownerDocument.documentElement.classList.toggle('dark');
+  }
+
+  
+  
     
 }
