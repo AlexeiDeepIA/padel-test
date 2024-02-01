@@ -1,5 +1,5 @@
 <app-nav-menu></app-nav-menu>
-<div class="w-full h-full dark:bg-zinc-900">
+<div class="w-full dark:bg-zinc-900 pb-6">
     <div class="px-6 py-6 flex justify-between backdrop-blur-sm bg-white/70 sticky top-0 z-10 dark:bg-backdrop-blur-sm dark:bg-gray-900/70">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 dark:text-gray-200">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -30,10 +30,22 @@
     </div>    
 </div>
 <!-- Card de repeticiones -->      
-<div class="dark:bg-zinc-900">
-    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">            
+<div class=" dark:bg-zinc-900 min-w-full  pb-4">
+    <div class="flex flex-col bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700"> 
+        <div class="relative rounded-t-lg">
+            <img src="../../assets/images/card.jpg" alt="" class="rounded-t-lg w-full min-h-[25vh] max-h-[25vh] relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-t-lg">
+                <div class="flex justify-center items-center h-full">
+                    <button class="bg-[#57FDDA] rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                        </svg>                      
+                    </button>
+                </div>
+            </div>
+        </div>           
         <div class="flex justify-center">
-            <span class="text-gray-400 dark:text-gray-200"> Best of 3</span>
+            <span class="text-gray-400 dark:text-gray-200 p-2"> Best of 3</span>
         </div>
         <div class="flex justify-center">        
             <span class="font-extrabold text-3xl dark:text-gray-200"> 2-1 </span>
@@ -54,7 +66,7 @@
             <div class="px-4">
                 <span class="text-gray-500 font-bold dark:text-gray-200"> Direccion: Valle Real </span>
                 <div class="flex justify-end -mt-6">
-                    <button class="bg-[#57FDDA] dark:bg-gray-900 hover:bg-zinc-900 dark:hover:bg-[#57FDDA] text-[#57FDDA] rounded-full w-10 h-10">
+                    <button [routerLink]="['/details']" class="bg-[#57FDDA] dark:bg-gray-900 hover:bg-zinc-900 dark:hover:bg-[#57FDDA] text-[#57FDDA] rounded-full w-10 h-10">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-2 text-black dark:text-gray-200 hover:text-white dark:hover:text-gray-900">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>                      
@@ -66,7 +78,19 @@
             </div>
         </div>                 
     </div>
-    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">            
+    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">     
+        <div class="relative rounded-t-lg">
+            <img src="../../assets/images/card.jpg" alt="" class="rounded-t-lg w-full min-h-[25vh] max-h-[25vh] relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-t-lg">
+                <div class="flex justify-center items-center h-full">
+                    <button class="bg-[#57FDDA] rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                        </svg>                      
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="flex justify-center">
             <span class="text-gray-400 dark:text-gray-200"> Best of 3</span>
         </div>
@@ -101,7 +125,19 @@
             </div>
         </div>                 
     </div>
-    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">            
+    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">   
+        <div class="relative rounded-t-lg">
+            <img src="../../assets/images/card.jpg" alt="" class="rounded-t-lg w-full min-h-[25vh] max-h-[25vh] relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-t-lg">
+                <div class="flex justify-center items-center h-full">
+                    <button class="bg-[#57FDDA] rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                        </svg>                      
+                    </button>
+                </div>
+            </div>
+        </div>         
         <div class="flex justify-center">
             <span class="text-gray-400 dark:text-gray-200"> Best of 3</span>
         </div>
@@ -136,7 +172,19 @@
             </div>
         </div>                 
     </div>
-    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">            
+    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">  
+        <div class="relative rounded-t-lg">
+            <img src="../../assets/images/card.jpg" alt="" class="rounded-t-lg w-full min-h-[25vh] max-h-[25vh] relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-t-lg">
+                <div class="flex justify-center items-center h-full">
+                    <button class="bg-[#57FDDA] rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                        </svg>                      
+                    </button>
+                </div>
+            </div>
+        </div>          
         <div class="flex justify-center">
             <span class="text-gray-400 dark:text-gray-200"> Best of 3</span>
         </div>
@@ -171,7 +219,19 @@
             </div>
         </div>                 
     </div>
-    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">            
+    <div class="bg-white ml-6 mr-6 mb-8 border-1 border-blue-900 pb-6 shadow-lg rounded-xl dark:bg-zinc-700"> 
+        <div class="relative rounded-t-lg">
+            <img src="../../assets/images/card.jpg" alt="" class="rounded-t-lg w-full min-h-[25vh] max-h-[25vh] relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent rounded-t-lg">
+                <div class="flex justify-center items-center h-full">
+                    <button class="bg-[#57FDDA] rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                        </svg>                      
+                    </button>
+                </div>
+            </div>
+        </div>           
         <div class="flex justify-center">
             <span class="text-gray-400 dark:text-gray-200"> Best of 3</span>
         </div>
@@ -205,5 +265,5 @@
                 <span class="text-gray-400"> hace 3 días</span>
             </div>
         </div>                 
-    </div>
+    </div>    
 </div>
