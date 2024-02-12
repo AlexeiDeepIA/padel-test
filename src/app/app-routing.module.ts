@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'details', component: DetailVideoComponent},
   { path: 'video', component: RepetitionComponent},
   { path: 'darkmode', component: DarkmodeComponent},
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' }
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '**', pathMatch: 'full', redirectTo: 'welcome' },
 ];
 
 @NgModule({

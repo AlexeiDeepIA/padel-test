@@ -4,7 +4,7 @@
         <div class="bg-[#57FDDA] p-[2px] rounded-full">
             <img [routerLink]="['/profile']" src="{{ profileData.picture }}" class="w-12 rounded-full" alt="" (error)="setDefaultImage()">
         </div>
-        <span class="text-black font-bold text-2xl dark:text-gray-200 mt-3">Welcome, {{ profileData.given_name }}!</span>        
+        <span class="text-black font-bold text-2xl dark:text-gray-200 mt-3">Welcome, {{ profileData.given_name }} !</span>        
         <div class="flex flex-col justify-center ml-3">
             <input type="checkbox" name="light-switch" class="light-switch sr-only" />
             <label class="relative cursor-pointer p-2" for="light-switch" >
@@ -35,7 +35,34 @@
     <span class="text-black font-bold text-lg p-6 dark:text-gray-200"> Popular Repetions </span> 
     <!-- Card para repeticiones populares -->   
     <div class="overflow-x-scroll flex flex-row">
-        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
+        <div *ngIf="videoInfo">
+            <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
+                <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                    <img class="rounded-lg" src="" alt="" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
+                        <div class="px-6 py-6 text-2xl">
+                            <span class="text-white font-bold"> </span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 right-0 p-2 text-white">
+                        <div class="flex justify-end">
+                            <button class="bg-[#57FDDA] rounded-full m-2 p-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
+                                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                                </svg>                          
+                            </button>                                                               
+                        </div>                
+                    </div>            
+                </div>                         
+            </div>
+        </div>            
+          
+        <!-- Mostrar el iframe directamente desde la respuesta del servidor -->                      
+          <div *ngIf="!videoInfo" class="p-4">
+            <p>Cargando video</p>
+          </div>                                        
+          
+        <div class="hidden block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
                 <img class="rounded-lg" src="https://pbs.twimg.com/ext_tw_video_thumb/1634597727722958852/pu/img/vL7QXO-SDeLoewTY.jpg:large" alt="" />
                 <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
@@ -54,7 +81,7 @@
                 </div>            
             </div>                         
         </div>    
-        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
+        <div class="hidden block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
                 <img class="rounded-lg" src="https://thepadellab.mx/cdn/shop/articles/alejandro-galan_juan-lebron_buenos-aires-padel-master-2022_cuartos_gp1_4619-1170x669_1100x.jpg?v=1676159441" alt=""/>
                 <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
@@ -73,7 +100,7 @@
                 </div>            
             </div>                         
         </div>   
-        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
+        <div class="hidden block rounded-lg p-2 relative overflow-hidden bg-slate-100 dark:bg-zinc-900 min-w-[80vw]">
             <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
                 <img class="rounded-lg" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2016/12/03/14807727442051.jpg" alt=""/>
                 <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">

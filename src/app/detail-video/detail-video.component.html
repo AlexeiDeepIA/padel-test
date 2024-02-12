@@ -11,26 +11,11 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
         </svg>          
     </div>
-    <div class="flex flex-col">
-        <div class="block rounded-lg p-2 relative bg-slate-100 min-w-[80vw] dark:bg-zinc-900">
-            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
-                <img class="rounded-lg" src="https://pbs.twimg.com/ext_tw_video_thumb/1634597727722958852/pu/img/vL7QXO-SDeLoewTY.jpg:large" alt="" />                               
-                    <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
-                    <div class="px-6 py-6 text-2xl">
-                        <span class="text-white font-bold">Smash Masters VS Net Ninjas</span>
-                    </div>
-                </div>
-                <div class="absolute p-2 text-white">
-                    <div class="flex justify-center">
-                        <button class="bg-[#57FDDA] rounded-full m-2 p-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
-                                <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
-                            </svg>                          
-                        </button>                                                               
-                    </div>                
-                </div>                         
-            </div>                         
-        </div>        
+    <div class="flex flex-col">    
+           <div [innerHTML]="sanitizedHtml">
+            
+           </div>
+         
         <!-- Card del marcador -->        
         <div class="bg-white mt-4 ml-2 mr-2 mb-4 border-1 border-blue-900 shadow-lg rounded-xl dark:bg-zinc-700">            
             <div class="flex justify-center">
