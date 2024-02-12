@@ -1,0 +1,20 @@
+<div class="relative w-full h-full">
+    <div class="form1"></div>
+    <div class="form2"></div>
+    <div class="form3"></div>
+    <div class="form4"></div>
+    <div class="absolute inset-0 flex justify-center items-center">    
+        <div class="flex flex-col h-[50vh] justify-between mx-auto mt-28">            
+            <img src="/assets/images/LogoBlack.png" alt="" class="dark:hidden w-64 pt-6">
+            <img src="/assets/images/LogoWhite.png" alt="" class="hidden dark:block w-64 pt-6">
+            <div class="grid justify-center pb-12 w-60 self-end h-auto">
+                <button [routerLink]="['/login']" class="bg-[#000000] w-60 p-2 mt-6 rounded-lg font-bold sombrita text-white dark:bg-white dark:text-black">
+                    Login 
+                </button>
+                <button [routerLink]="['/signup']" class="border-2 border-neutral-800 p-2 mt-6 rounded-lg font-bold dark:border-gray-200 dark:text-gray-200">
+                    Sign Up
+                </button>
+            </div>            
+        </div>                
+    </div>    
+</div>
