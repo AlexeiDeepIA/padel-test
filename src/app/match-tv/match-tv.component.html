@@ -1,0 +1,187 @@
+<app-nav-menu></app-nav-menu>
+<div class="w-full h-full bg-slate-100 dark:bg-zinc-900">    
+    <div class="p-6 flex justify-between ">        
+        <img src="../../assets/images/logo.png" class="w-14" alt="">        
+        <div class="flex mb-2">            
+            <div class="grid place-items-end pr-4">
+                <span class="text-black font-bold text-sm dark:text-gray-200 mt-3">{{ profileData.name }}</span>        
+                <span class="text-black text-sm dark:text-gray-200">Guadalajara, México</span>
+            </div>
+            <div class="p-[2px] rounded-full">
+                <img [routerLink]="['/profile']" src="{{ profileData.picture }}" class="w-12 rounded-full" alt="" (error)="setDefaultImage()">            
+            </div>        
+        </div>                  
+        <!--
+        <div class="flex flex-col justify-center ml-3">
+            <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+            <label class="relative cursor-pointer p-2" for="light-switch" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden w-8 h-8" (click)="toggleDarkMode()">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>                  
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden dark:text-white dark:block w-8 h-8" (click)="toggleDarkMode()">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>                  
+                <span class="sr-only">Switch to light / dark version</span>
+            </label>
+        </div>
+        -->
+    </div>
+    <div class="px-6 pb-2 w-full flex">   
+        <span class="text-2xl font-bold"> Live TV</span>     
+        <span class="relative flex h-3 w-3">                       
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+          </span>
+    </div>
+    <div class="grid justify-center w-full h-full">        
+        <div class="relative">
+            <input type="text" placeholder="Search" class="shadow-md border-2 border-gray-200 w-[380px] p-2 rounded-lg bg-gray-300/30 focus:border-[#BBF246] focus:outline-none focus:shadow-outline-blue" >
+            <span class="absolute inset-y-0 right-0 flex items-center pr-2">
+                <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                      </svg>                                                
+                </button>
+            </span>                
+        </div>
+        <div class="m-2 flex">            
+        </div>        
+    </div>         
+    <h1 class="font-bold text-[25px] px-6 pb-4"> Popular Repetitions </h1>
+    <!-- Card para repeticiones populares -->   
+    <div class="overflow-x-scroll flex flex-row px-4">
+        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 min-w-[80vw]">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                <img class="rounded-lg" src="https://pbs.twimg.com/ext_tw_video_thumb/1634597727722958852/pu/img/vL7QXO-SDeLoewTY.jpg:large" alt="" />
+                <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
+                    <div class="px-6 py-6 text-2xl">
+                        <span class="text-white font-bold">Smash Masters VS Net Ninjas</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0 p-2 text-white">
+                    <div class="flex justify-end">
+                        <button class="bg-[#00ffda] rounded-full m-2 p-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
+                                <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                            </svg>                          
+                        </button>                                                               
+                    </div>                
+                </div>            
+            </div>     
+            <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
+                  </svg>               
+                  <span class="px-2"> 12.K </span>   
+            </div>                  
+        </div>    
+        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 min-w-[80vw]">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                <img class="rounded-lg" src="https://thepadellab.mx/cdn/shop/articles/alejandro-galan_juan-lebron_buenos-aires-padel-master-2022_cuartos_gp1_4619-1170x669_1100x.jpg?v=1676159441" alt=""/>
+                <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
+                    <div class="px-6 py-6 text-2xl">
+                        <span class="text-white font-bold">Los Raqueteros VS Padel Power</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0 p-2 text-white">
+                    <div class="flex justify-end">
+                        <button class="bg-[#00ffda] rounded-full m-2 p-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
+                                <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                            </svg>                          
+                        </button>                                                               
+                    </div>                
+                </div>            
+            </div>
+            <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
+                  </svg>               
+                  <span class="px-2"> 12.K </span>   
+            </div>        
+                                         
+        </div>   
+        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 min-w-[80vw]">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                <img class="rounded-lg" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2016/12/03/14807727442051.jpg" alt=""/>
+                <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent">
+                    <div class="px-6 py-6 text-2xl">
+                        <span class="text-white font-bold">Niupi VS San Francis</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0 p-2 text-white">
+                    <div class="flex justify-end">
+                        <button class="bg-[#00ffda] rounded-full m-2 p-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-black">
+                                <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                            </svg>                          
+                        </button>                                                               
+                    </div>                
+                </div>            
+            </div> 
+            <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
+                  </svg>               
+                  <span class="px-2"> 12.K </span>   
+            </div>                                    
+        </div>         
+    </div>
+    <div class="flex justify-between px-6 pb-4 items-center">
+        <h1 class="font-bold text-[25px] "> Creators </h1>
+        <span class="text-lg">See All</span>
+    </div>
+    <div class="overflow-x-scroll flex flex-row px-6 pb-4 gap-4">        
+        <div class="relative overflow-hidden bg-[#2d2d2d] rounded-lg p-4 flex items-center min-w-[60vw]">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="" class="rounded-full w-12">
+            <span class="px-2 text-white text-[22px]"> Tyler the creator </span>
+        </div>
+        <div class="relative overflow-hidden bg-[#2d2d2d] rounded-lg p-4 flex items-center min-w-[60vw]">
+            <img src="https://i.pinimg.com/originals/8b/31/5b/8b315b1721d869a49b40cb20b8fcae64.jpg" alt="" class="rounded-full w-12">
+            <span class="px-2 text-white text-[22px]"> Ninja </span>
+        </div>
+        <div class="relative overflow-hidden bg-[#2d2d2d] rounded-lg p-4 flex items-center min-w-[60vw]">
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/200/683/desktop-wallpaper-can-you-name-these-famous-youtubers-mrbeast-thumbnail.jpg" alt="" class="rounded-full w-12">
+            <span class="px-2 text-white text-[22px]"> Mr. Beast </span>
+        </div>
+    </div>
+    <div class="flex items-center justify-between px-6">
+        <h1 class="font-bold text-[25px] "> Best highlights </h1>
+        <span class="text-[20px] text-[#0025ff] font-bold"> See All</span>
+    </div>
+    <div class="overflow-x-scroll flex flex-row p-4">
+        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 min-w-[60vw]">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                <img class="rounded-lg h-[40vh] object-cover" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2016/12/03/14807727442051.jpg">
+                <div class="absolute inset-0 bg-gradient-to-r grid items-end from-black to-transparent">
+                    <div class="px-6 py-6 text-lg">
+                        <span class="font-bold text-[#00ffda]"> Padel Club GDL | 26/02/24 </span>
+                    </div>
+                </div>                     
+            </div>                                                 
+        </div>   
+        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 min-w-[60vw] h-full">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                <img class="rounded-lg h-[40vh] object-cover" src="https://cdn.forbes.com.mx/2023/08/GettyImages-1533401838-640x360.webp" alt=""/>
+                <div class="absolute inset-0 bg-gradient-to-r grid items-end from-black to-transparent">
+                    <div class="px-6 py-6 text-lg">
+                        <span class="font-bold text-[#00ffda]"> Padel Club GDL | 26/02/24 </span>
+                    </div>
+                </div>                     
+            </div>                                                 
+        </div>  
+        <div class="block rounded-lg p-2 relative overflow-hidden bg-slate-100 min-w-[60vw] h-full">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat rounded-[10px]" data-te-ripple-init data-te-ripple-color="light">
+                <img class="rounded-lg h-[40vh] object-cover" src="https://www.conadeip.org/wp-content/uploads/2023/03/padeltec.jpg" alt=""/>
+                <div class="absolute inset-0 bg-gradient-to-r grid items-end from-black to-transparent">
+                    <div class="px-6 py-6 text-lg">
+                        <span class="font-bold text-[#00ffda]"> Padel Club GDL | 26/02/24 </span>
+                    </div>
+                </div>                     
+            </div>                                                 
+        </div>         
+    </div>    
+</div>

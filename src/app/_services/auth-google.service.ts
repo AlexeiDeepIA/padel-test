@@ -18,7 +18,7 @@ export class AuthGoogleService {
         issuer: 'https://accounts.google.com',
         strictDiscoveryDocumentValidation: false,
         clientId: '47385887118-8pp2vec1nguvfr1vu8s7gskl6546aohg.apps.googleusercontent.com',
-        redirectUri: window.location.origin + '/homescreen',
+        redirectUri: window.location.origin + '/ubication',
         scope: 'openid profile email' 
       }
 
@@ -33,8 +33,7 @@ export class AuthGoogleService {
 
     logout(){
       this.oauthService.logOut();
-      this.router.navigate(['/home']);
-      
+      this.router.navigate(['/home']);      
     }
 
     getProfile(){

@@ -30,25 +30,10 @@ export class NavMenuComponent {
       this.isScrollingDown = false;
       this.isScrollingUp = true;
     }
-
     this.lastScrollTop = st;
   }
 
   isCurrentPage(route: string): boolean{
     return this.currentPage.includes(route);
   }
-
-  updateMenuColor() {
-    // Lógica para asignar colores según la página actual
-    if (this.currentPage.includes('/homescreen')) {
-      this.animateColorChange = this.currentMenuColor !== '#57FDDA';
-      this.currentMenuColor = '#57FDDA';
-    } else {
-      this.animateColorChange = this.currentMenuColor !== '#192026';
-      this.currentMenuColor = '#192026';
-    }
-  }
-
-
-
 }

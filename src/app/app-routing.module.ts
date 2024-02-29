@@ -10,6 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { DetailVideoComponent } from './detail-video/detail-video.component';
 import { RepetitionComponent } from './repetition/repetition.component';
 import { DarkmodeComponent } from './darkmode/darkmode.component';
+import { UbicationComponent } from './ubication/ubication.component';
+import { MatchTvComponent } from './match-tv/match-tv.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'details', component: DetailVideoComponent},
   { path: 'video', component: RepetitionComponent},
   { path: 'darkmode', component: DarkmodeComponent},
+  { path: 'ubication', component: UbicationComponent},
+  { path: 'tv', component: MatchTvComponent},
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', pathMatch: 'full', redirectTo: 'welcome' },
 ];

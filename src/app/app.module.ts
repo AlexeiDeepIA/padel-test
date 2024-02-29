@@ -17,6 +17,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGoogleService } from './_services/auth-google.service';
 import { RepetitionComponent } from './repetition/repetition.component';
 import { DarkmodeComponent } from './darkmode/darkmode.component';
+import { UbicationComponent } from './ubication/ubication.component';
+import { MatchTvComponent } from './match-tv/match-tv.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { DarkmodeComponent } from './darkmode/darkmode.component';
     ProfileComponent,
     DetailVideoComponent,
     RepetitionComponent,
-    DarkmodeComponent
+    DarkmodeComponent,
+    UbicationComponent,
+    MatchTvComponent
   ],
   imports: [
     BrowserModule,
