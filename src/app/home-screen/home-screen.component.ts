@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { AuthGoogleService } from '../_services/auth-google.service';
+import { Router } from '@angular/router';
 import { VideoServiceService } from '../_services/video-service.service';
 import { DomSanitizer, SafeResourceUrl, SafeHtml } from '@angular/platform-browser';
 
@@ -15,9 +16,11 @@ export class HomeScreenComponent implements OnInit {
   videoId = '908757963';
   videoInfo: any;
   trustedVideoUrl: SafeResourceUrl | undefined;
+  cityName: any;
 
   constructor(
     private AuthGoogleService: AuthGoogleService,
+    private router: Router,
     private el: ElementRef,
     private vimeoService: VideoServiceService,
     private sanitizer: DomSanitizer
@@ -29,7 +32,18 @@ export class HomeScreenComponent implements OnInit {
       this.getProfileData();
     });
 
+    this.getCityNameFromState();
   }
+
+ // Método para obtener cityName desde el estado de la navegación
+  getCityNameFromState() {
+    const navigation = this.router.getCurrentNavigation();
+    if (navigation && navigation.extras.state) {
+      this.cityName = navigation.extras.state; // Corrige la línea aquí      
+      console.log('cityName:', this.cityName); // Agrega esta línea para depurar      
+    }
+  }
+
 
   setDefaultImage() {
     this.profileData.picture =

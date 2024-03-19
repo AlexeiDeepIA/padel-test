@@ -1,0 +1,8 @@
+<div class="min-w-full min-h-screen">
+    <div class="w-full overflow-y-scroll snap-mandatory snap-y">
+        <div class="snap-center" *ngFor="let video of [1, 2, 3]; let i = index">
+            <video #videoPlayer class="min-h-screen object-cover" src="../../assets/videos/reel.mp4" autoplay loop (click)="toggleVideoPlayback(videoPlayer, i)"></video>
+        </div>
+    </div>
+</div>
+  

@@ -12,6 +12,7 @@ import { RepetitionComponent } from './repetition/repetition.component';
 import { DarkmodeComponent } from './darkmode/darkmode.component';
 import { UbicationComponent } from './ubication/ubication.component';
 import { MatchTvComponent } from './match-tv/match-tv.component';
+import { ReelsComponent } from './reels/reels.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'darkmode', component: DarkmodeComponent},
   { path: 'ubication', component: UbicationComponent},
   { path: 'tv', component: MatchTvComponent},
+  { path: 'reels', component: ReelsComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', pathMatch: 'full', redirectTo: 'welcome' },
 ];

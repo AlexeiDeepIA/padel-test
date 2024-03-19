@@ -19,6 +19,7 @@ import { RepetitionComponent } from './repetition/repetition.component';
 import { DarkmodeComponent } from './darkmode/darkmode.component';
 import { UbicationComponent } from './ubication/ubication.component';
 import { MatchTvComponent } from './match-tv/match-tv.component';
+import { ReelsComponent } from './reels/reels.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MatchTvComponent } from './match-tv/match-tv.component';
     RepetitionComponent,
     DarkmodeComponent,
     UbicationComponent,
-    MatchTvComponent
+    MatchTvComponent,
+    ReelsComponent
   ],
   imports: [
     BrowserModule,
